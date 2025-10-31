@@ -1,48 +1,50 @@
-// Livro.hpp
 #include <iostream>
-#pragma once
-#include <string>
-#include <stdexcept>
-
 using namespace std;
 
-class Livro {
-string titulo, autor, isbn;
-bool disponivel {true};
-
+class Carro {
+    
 public:
-Livro(const string& t, const string& a, const
-string& i);
-
-const string& getTitulo() const; void setTitulo(const
-string& t);
-
-const string& getAutor() const; void setAutor(const
-string& a);
-
-const string& getIsbn() const; void setIsbn(const
-string& i);
-
-bool isDisponivel() const; void
-setDisponivel(bool d);
-string toString() const;
+    
+    string nome;
+    int cpf;
+    
+    void setNome(string _nome);
+    string getNome();
+    void setCpf(int _cpf);
+    int getCpf();
 };
 
-void Livro::setAutor(const string& a){
-
+void Carro::setNome(string _nome){
+    nome = _nome;
 }
 
-const string& getAutor(){
-
+string Carro::getNome(){
+    return nome;
 }
 
-int main(){
-
-    Livro a;
-    p1.setAutor("marcos");
-
-    cout << "nome: " << getAutor() << endl;
-
-
-return 0;
+void Carro::setCpf(int _cpf){
+    cpf = _cpf;
 }
+
+int Carro::getCpf(){
+    return cpf;
+}
+
+
+
+int main() {
+
+Carro p1;
+string nome;
+
+cout << "Digite seu nome: " << endl;
+cin >> nome;
+
+cout << "\n\n" << endl;
+
+p1.setNome(nome);
+p1.setCpf(nome);
+    
+    cout << "Nome: " << p1.getNome() << endl;
+    
+return 0
