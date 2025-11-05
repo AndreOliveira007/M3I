@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+class Calculadora{
+public:
+    int num1;
+    int num2;
+
+    Calculadora(int a, int b);
+    int soma();
+    int subtracao();
+    int multiplicacao();
+    int divisao();
+
+};
+
+Calculadora::Calculadora(int a, int b){
+    num1 = a;
+    num2 = b;
+}
+
+int Calculadora::soma(){
+    return num1 + num2;
+}
+
+int Calculadora::subtracao(){
+    return num1 - num2;
+}
+
+int Calculadora::multiplicacao(){
+    return num1 * num2;
+}
+
+int Calculadora::divisao(){
+    return num1 / num2;
+}
+
+int main(){
+
+ int num1, num2, opcao;
+
+    do{
+    cout << "\n--Calculadora--" << endl;
+    cout << "1. soma" << endl;
+    cout << "2. sub" << endl;
+    cout << "3. multiplicacao" << endl;
+    cout << "4. divisao" << endl;
+    cout << "0. Sair" << endl;
+     cout <<"\n" << endl;
+
+    cin >> opcao;
+
+     if (opcao == 0) {
+            cout << "\nEncerrando programa..." << endl;
+            break;
+        }
+
+    cout << "\nDigite um numero: " << endl;
+    cin >> num1;
+    cout << "Digite um numero: " << endl;
+    cin >> num2;
+
+    Calculadora p1(num1,num2);
+
+        switch(opcao){
+
+            case 1:
+            cout << "\nResultado: " << p1.soma() << endl;
+            break;
+
+            case 2:
+
+            cout << "\nResultado: " << p1.subtracao() << endl;
+            break;
+            case 3:
+
+            cout << "\nResultado: " << p1.multiplicacao() << endl;
+            break;
+            case 4:
+
+            cout << "\nResultado: " << p1.divisao() << endl;
+            break;
+        }
+    }while(opcao != 0);
+
+return 0;
+}
