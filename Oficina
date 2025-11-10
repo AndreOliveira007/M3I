@@ -27,19 +27,57 @@ void Cliente::cpfCliente(){
 int main(){
     
     string nome;
-    int cpf;
+    int cpf, opcao;
     
-    cout << "Digite seu nome para ser cadastrado: " << endl;
-    cin >> nome;
+    do{
+    cout << "-- OFICINA -- \n" << endl;
+    cout << "Qual opcao gostaria de acessar: \n" << endl;
+    cout << "1.Cadastro de clientes. \n" << endl; 
+    cout << "2.Funcionarios. \n" << endl;
+    cout << "3.Sair. \n" << endl;
     
-    cout << "Digite seu cpf: " << endl;
-    cin >> cpf;
+    cin >> opcao;
+        
+        switch(opcao){
     
-    Cliente p1(nome, cpf);
+            case 1:{
+            
+            cout << "Digite seu nome para ser cadastrado: " << endl;
+            cin >> nome;
     
-    p1.nomeCliente();
+            cout << "Digite seu cpf: " << endl;
+            cin >> cpf;
+            
+            Cliente p1(nome, cpf);
+                
+                p1.nomeCliente();
+                
+                p1.cpfCliente();
+            
+            break;
+            }
+            
+            case 2: {
+                
+            }
+            
+            break;
+            
+            case 3:{
+                
+                
+            }
+            
+            break;
+            
+            default:{}
+            
+        }
+        
+        
+    }while(opcao != 0);
     
-    p1.cpfCliente();
+    
     
     
     return 0;
