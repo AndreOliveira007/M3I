@@ -1,0 +1,46 @@
+#include <iostream>
+using  namespace std;
+
+class Cliente{
+  public:
+    string nome;
+    int cpf;
+    
+    Cliente(string nome, int cpf);
+    void nomeCliente();
+    void cpfCliente();
+};
+
+Cliente::Cliente(string n, int c){
+    nome = n;
+    cpf = c;
+}
+
+void Cliente::nomeCliente(){
+    cout << "O nome e: " << nome << endl;
+}
+
+void Cliente::cpfCliente(){
+    cout << "E sua idade e: " << cpf <<  endl;
+}
+
+int main(){
+    
+    string nome;
+    int cpf;
+    
+    cout << "Digite seu nome para ser cadastrado: " << endl;
+    cin >> nome;
+    
+    cout << "Digite seu cpf: " << endl;
+    cin >> cpf;
+    
+    Cliente p1(nome, cpf);
+    
+    p1.nomeCliente();
+    
+    p1.cpfCliente();
+    
+    
+    return 0;
+}
