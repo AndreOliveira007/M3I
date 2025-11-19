@@ -1,0 +1,35 @@
+#ifndef PESSOA_H
+#define PESSOA_H
+#include <iostream>
+
+
+class Pessoa
+{
+    public:
+        Pessoa(string _nome, string _ cpf, string _email, string _telefone, string endereco);
+        virtual ~Pessoa();
+        string getnome();
+        string getcpf();
+        string getemail();
+        string gettelefone();
+        string getendereco();
+        
+        void setNome(string _nome);
+        void setCpf(string _cpf);
+        void setEmail(string _email);
+        void setTelefone(string _telefone);
+        void setEndereco(string _endereco);
+        
+        
+
+    protected:
+
+    private:
+    string nome;
+    string cpf;
+    string email;
+    string telefone;
+    string endereco;
+};
+
+#endif // PESSOA_H
